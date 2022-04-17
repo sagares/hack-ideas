@@ -1,4 +1,3 @@
-<img width="1179" alt="Screenshot 2022-04-18 at 12 21 13 AM" src="https://user-images.githubusercontent.com/31887015/163728396-e31cdd59-9a02-4420-8b8a-51205a5bcabd.png">
 #  { Hack Ideas }
 ### A web application in react to register and view hackathon ideas of an organization.
 
