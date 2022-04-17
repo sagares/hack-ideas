@@ -40,7 +40,6 @@ describe("Hack Ideas Reducer", () => {
       idea2: { name: "idea 2" },
     };
     const updatedState = HackIdeasReducer(mockState, mockAction);
-    console.log(updatedState);
     expect(updatedState).toEqual({
       currentUser: "",
       ideas: { idea1: { name: "idea 1" }, idea2: { name: "idea 2" } },

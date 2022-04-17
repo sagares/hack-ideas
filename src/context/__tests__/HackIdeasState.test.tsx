@@ -58,6 +58,10 @@ describe("Hack Ideas State", () => {
     });
   });
 
+  afterEach(() => {
+    document.body.removeChild(element);
+  });
+
   test("renders hack ideas state", () => {
     expect(component.container).toMatchSnapshot();
   });

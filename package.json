@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --watch --coverage",
+    "test": "jest --coverage",
     "start": "serve dist"
   },
-  "author": "",
+  "author": "Santosh Sagare (santosh.sagare@outlook.com)",
   "license": "ISC",
   "dependencies": {
     "@types/firebase": "^3.2.1",
