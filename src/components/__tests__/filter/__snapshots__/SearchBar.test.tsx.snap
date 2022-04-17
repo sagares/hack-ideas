@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar Component renders 1`] = `
+<div>
+  <nav>
+    <div
+      class="nav-wrapper"
+    >
+      <form>
+        <div
+          class="input-field grey lighten-4"
+        >
+          <input
+            id="search"
+            type="search"
+            value="mock-search"
+          />
+          <label
+            class="label-icon"
+            for="search"
+          >
+            <i
+              class="material-icons"
+            >
+              search
+            </i>
+          </label>
+          <i
+            class="clear-icon material-icons"
+          >
+            close
+          </i>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+`;

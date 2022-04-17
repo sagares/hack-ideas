@@ -1,0 +1,81 @@
+@import "../../colors.less";
+
+.register-idea-btn {
+  .btn-large {
+    background-color: @emphasis-clr;
+    i {
+      color: @dark-clr;
+    }
+  }
+}
+
+.register-idea--modal {
+  &.open {
+    background-color: fade(@black, 40%);
+    left: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+    .modal {
+      animation: open-dialog 0.3s cubic-bezier(0.1, 0.82, 0.25, 1);
+      display: block;
+      height: 70%;
+      opacity: 1;
+      top: 10%;
+      transform: scaleX(1) scaleY(1);
+      width: 45%;
+      z-index: 1003;
+
+      h4 {
+        color: @emphasis-clr;
+      }
+
+      p {
+        color: @dark-clr;
+      }
+
+      form {
+        .materialize-textarea {
+          height: 7em;
+          transition: height 200ms ease-in;
+        }
+
+        .invalid-field {
+          input {
+            border-bottom-color: @error;
+          }
+          .helper-text {
+            color: @error;
+          }
+        }
+      }
+
+      .modal-footer {
+        a {
+          color: @emphasis-clr;
+        }
+
+        button {
+          background-color: @emphasis-clr;
+          color: @dark-clr;
+        }
+      }
+    }
+  }
+}
+
+@keyframes open-dialog {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../colors.less";
+
+.nav-wrapper {
+  background-color: @dark-clr;
+
+  .brand-logo {
+    color: @emphasis-clr;
+    font-weight: 600;
+    margin-left: 0.5em;
+  }
+
+  ul {
+    li {
+      a {
+        color: @emphasis-clr;
+
+        &:hover {
+          background-color: fade(@white, 10%);
+        }
+      }
+    }
+  }
+}

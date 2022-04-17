@@ -1,0 +1,60 @@
+@import "../../colors.less";
+
+.hack-ideas--filter {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7em;
+    margin-bottom: 0;
+
+    .search-bar {
+      .nav-wrapper {
+        .input-field {
+          &.grey {
+            label {
+              i {
+                color: @body-text;
+              }
+            }
+          }
+        }
+      }
+      @media only screen and (min-width: 601px) {
+        nav {
+          .height50();
+          .nav-wrapper {
+            i {
+              .height50();
+            }
+          }
+        }
+      }
+    }
+    .filter-dropdown {
+      display: flex;
+      margin: 0 !important;
+      position: relative;
+
+      .btn-large {
+        background-color: @emphasis-clr;
+        i {
+          color: @dark-clr;
+        }
+      }
+      .dropdown-content {
+        height: auto !important;
+        width: auto !important;
+        li {
+          > a {
+            color: @emphasis-clr;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .height50() {
+    height: 50px;
+    line-height: 50px;
+  }

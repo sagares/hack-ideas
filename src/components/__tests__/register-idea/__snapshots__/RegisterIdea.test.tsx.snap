@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Idea Component renders 1`] = `
+<div>
+  <div
+    class="fixed-action-btn register-idea-btn"
+  >
+    <a
+      class="btn-floating btn-large"
+    >
+      <i
+        class="large material-icons"
+      >
+        add
+      </i>
+    </a>
+  </div>
+</div>
+`;

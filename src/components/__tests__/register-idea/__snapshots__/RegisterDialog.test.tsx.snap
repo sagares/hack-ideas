@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Dialog Component renders 1`] = `
+<div>
+  <div
+    class="register-idea--modal open"
+  >
+    <div
+      class="modal modal-fixed-footer"
+      id="modal1"
+    >
+      <div
+        class="modal-content"
+      >
+        <h4>
+          Register New Idea
+        </h4>
+        <p>
+          Please fill in the form below to register your hack idea.
+        </p>
+        <div
+          class="row"
+        >
+          <form
+            class="col s12"
+          >
+            <div
+              class="title-field input-field col s12 "
+            >
+              <input
+                class="validate"
+                id="idea_title"
+                name="title"
+                type="text"
+                value=""
+              />
+              <label
+                for="idea_title"
+              >
+                Title *
+              </label>
+              <span
+                class="helper-text"
+              />
+            </div>
+            <div
+              class="description-field input-field col s12 "
+            >
+              <textarea
+                class="materialize-textarea "
+                id="description"
+                name="description"
+              />
+              <label
+                for="description"
+              >
+                Description *
+              </label>
+              <span
+                class="character-counter"
+                style="float: right; font-size: 12px;"
+              >
+                0
+              </span>
+              <span
+                class="helper-text"
+              />
+            </div>
+            <div
+              class="tags-field input-field col s12 "
+            >
+              <div
+                class="select-wrapper"
+              >
+                <input
+                  class="select-dropdown dropdown-trigger"
+                  data-target="select-options-bacaaf9f-26b1-244a-c760-92f9c2b9d088"
+                  readonly="true"
+                  type="text"
+                />
+                <ul
+                  class="dropdown-content select-dropdown multiple-select-dropdown"
+                  id="select-options-bacaaf9f-26b1-244a-c760-92f9c2b9d088"
+                  tabindex="0"
+                >
+                  <li
+                    class="disabled"
+                    id="select-options-bacaaf9f-26b1-244a-c760-92f9c2b9d0880"
+                    tabindex="0"
+                  >
+                    <span>
+                      <label>
+                        <input
+                          "=""
+                          disabled=""
+                          type="checkbox"
+                        />
+                        <span>
+                          Select one or more tags.
+                        </span>
+                      </label>
+                    </span>
+                  </li>
+                  <li
+                    id="select-options-bacaaf9f-26b1-244a-c760-92f9c2b9d0881"
+                    tabindex="0"
+                  >
+                    <span>
+                      <label>
+                        <input
+                          "=""
+                          type="checkbox"
+                        />
+                        <span>
+                          Feature
+                        </span>
+                      </label>
+                    </span>
+                  </li>
+                  <li
+                    id="select-options-bacaaf9f-26b1-244a-c760-92f9c2b9d0882"
+                    tabindex="0"
+                  >
+                    <span>
+                      <label>
+                        <input
+                          "=""
+                          type="checkbox"
+                        />
+                        <span>
+                          Tech
+                        </span>
+                      </label>
+                    </span>
+                  </li>
+                  <li
+                    id="select-options-bacaaf9f-26b1-244a-c760-92f9c2b9d0883"
+                    tabindex="0"
+                  >
+                    <span>
+                      <label>
+                        <input
+                          "=""
+                          type="checkbox"
+                        />
+                        <span>
+                          Bugfix
+                        </span>
+                      </label>
+                    </span>
+                  </li>
+                </ul>
+                <svg
+                  class="caret"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+                <select
+                  class=""
+                  multiple=""
+                  name="tags"
+                  tabindex="-1"
+                >
+                  <option
+                    disabled=""
+                    value=""
+                  >
+                    Select one or more tags.
+                  </option>
+                  <option
+                    value="feature"
+                  >
+                    Feature
+                  </option>
+                  <option
+                    value="tech"
+                  >
+                    Tech
+                  </option>
+                  <option
+                    value="bugfix"
+                  >
+                    Bugfix
+                  </option>
+                </select>
+              </div>
+              <label>
+                Tags
+              </label>
+              <span
+                class="helper-text"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="modal-footer"
+      >
+        <a
+          class="cancel-btn modal-close waves-effect waves-red btn-flat"
+        >
+          Close
+        </a>
+        <button
+          class="submit-btn modal-close waves-effect waves-green btn-flat"
+          disabled=""
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

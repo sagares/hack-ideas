@@ -33,6 +33,7 @@ exports[`App Component renders login form 1`] = `
             >
               <input
                 class="validate tooltipped"
+                data-error="Employee ID is required"
                 data-position="bottom"
                 data-tooltip="Enter your 6 digit employee ID"
                 id="empId"
@@ -52,6 +53,7 @@ exports[`App Component renders login form 1`] = `
           >
             <button
               class="col s6 m12 l12 btn btn-large waves-effect"
+              disabled=""
               name="btn_login"
               type="submit"
             >

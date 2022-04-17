@@ -1,0 +1,60 @@
+@import "../colors.less";
+
+.login-form-card {
+  background-color: @dark-clr;
+  color: @emphasis-clr;
+
+  .login-form-wrapper {
+    h2 {
+      font-weight: 600;
+    }
+  }
+
+  .input-field {
+    color: @emphasis-clr;
+    position: relative;
+
+    .prefix {
+      &.active {
+        color: @emphasis-clr;
+      }
+    }
+    > label {
+      color: fade(@emphasis-clr, 50%);
+    }
+
+    input[type="text"] {
+      border-bottom-color: @emphasis-clr;
+      color: @emphasis-clr;
+
+      &:focus {
+        border-bottom-color: @emphasis-clr;
+        + label {
+          color: @emphasis-clr;
+        }
+      }
+
+      &.valid {
+        &:not(.browser-default) {
+          border-bottom: @emphasis-clr;
+          box-shadow: 0 1px 0 0 @emphasis-clr;
+        }
+      }
+    }
+
+    .helper-text {
+      color: @emphasis-clr;
+    }
+  }
+
+  .btn {
+    background-color: @emphasis-clr;
+    color: @dark-clr;
+  }
+
+  @media screen and (max-width: 600px) {
+    .login-form-wrapper {
+      flex-direction: column;
+    }
+  }
+}

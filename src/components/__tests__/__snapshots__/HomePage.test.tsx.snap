@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Component does not render ideas grid if ideas not defined 1`] = `
+<div>
+  <div
+    class="hack-ideas--home-page"
+  >
+    <nav>
+      <div
+        class="nav-wrapper"
+      >
+        <a
+          class="brand-logo"
+        >
+          { Hack Ideas }
+        </a>
+        <ul
+          class="right hide-on-med-and-down"
+        >
+          <li>
+            <a
+              class="logout-btn"
+            >
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="hack-ideas--filter row"
+    >
+      <div
+        class="search-bar col s12 m12 l4"
+      >
+        <nav>
+          <div
+            class="nav-wrapper"
+          >
+            <form>
+              <div
+                class="input-field grey lighten-4"
+              >
+                <input
+                  id="search"
+                  type="search"
+                  value=""
+                />
+                <label
+                  class="label-icon"
+                  for="search"
+                >
+                  <i
+                    class="material-icons"
+                  >
+                    search
+                  </i>
+                </label>
+                <i
+                  class="clear-icon material-icons"
+                >
+                  close
+                </i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="filter-dropdown col s4 m2 l2"
+      >
+        <a
+          class="dropdown-trigger btn-floating btn-large"
+          data-target="dropdown1"
+        >
+          <i
+            class="large material-icons"
+          >
+            sort
+          </i>
+        </a>
+        <ul
+          class="dropdown-content"
+          id="dropdown1"
+          tabindex="0"
+        >
+          <li
+            class=""
+            tabindex="0"
+          >
+            <a>
+              <i
+                class="material-icons"
+              >
+                access_time
+              </i>
+              By Created On
+            </a>
+          </li>
+          <li
+            class=""
+            tabindex="0"
+          >
+            <a>
+              <i
+                class="material-icons"
+              >
+                thumb_up
+              </i>
+              By Upvotes
+            </a>
+          </li>
+          <li
+            class="divider"
+            tabindex="-1"
+          />
+          <li
+            tabindex="0"
+          >
+            <a>
+              <i
+                class="material-icons"
+              >
+                cached
+              </i>
+              Reset
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="hack-ideas--cards"
+    >
+      <div
+        class="card-panel red lighten-4 center-align"
+      >
+        No ideas to show.
+      </div>
+    </div>
+    <div
+      class="fixed-action-btn register-idea-btn"
+    >
+      <a
+        class="btn-floating btn-large"
+      >
+        <i
+          class="large material-icons"
+        >
+          add
+        </i>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Page Component renders hack ideas grid 1`] = `
+<div>
+  <div
+    class="hack-ideas--home-page"
+  >
+    <nav>
+      <div
+        class="nav-wrapper"
+      >
+        <a
+          class="brand-logo"
+        >
+          { Hack Ideas }
+        </a>
+        <ul
+          class="right hide-on-med-and-down"
+        >
+          <li>
+            <a
+              class="logout-btn"
+            >
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="hack-ideas--filter row"
+    >
+      <div
+        class="search-bar col s12 m12 l4"
+      >
+        <nav>
+          <div
+            class="nav-wrapper"
+          >
+            <form>
+              <div
+                class="input-field grey lighten-4"
+              >
+                <input
+                  id="search"
+                  type="search"
+                  value=""
+                />
+                <label
+                  class="label-icon"
+                  for="search"
+                >
+                  <i
+                    class="material-icons"
+                  >
+                    search
+                  </i>
+                </label>
+                <i
+                  class="clear-icon material-icons"
+                >
+                  close
+                </i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="filter-dropdown col s4 m2 l2"
+      >
+        <a
+          class="dropdown-trigger btn-floating btn-large"
+          data-target="dropdown1"
+        >
+          <i
+            class="large material-icons"
+          >
+            sort
+          </i>
+        </a>
+        <ul
+          class="dropdown-content"
+          id="dropdown1"
+          tabindex="0"
+        >
+          <li
+            class=""
+            tabindex="0"
+          >
+            <a>
+              <i
+                class="material-icons"
+              >
+                access_time
+              </i>
+              By Created On
+            </a>
+          </li>
+          <li
+            class=""
+            tabindex="0"
+          >
+            <a>
+              <i
+                class="material-icons"
+              >
+                thumb_up
+              </i>
+              By Upvotes
+            </a>
+          </li>
+          <li
+            class="divider"
+            tabindex="-1"
+          />
+          <li
+            tabindex="0"
+          >
+            <a>
+              <i
+                class="material-icons"
+              >
+                cached
+              </i>
+              Reset
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="hack-ideas--cards"
+    >
+      <div
+        class="hack-idea--grid"
+      >
+        <div
+          class="hack-idea--card card"
+        >
+          <div
+            class="card-content"
+          >
+            <span
+              class="card-title"
+            >
+              idea 1
+            </span>
+            <p>
+              idea 1
+            </p>
+            <div
+              class="card-chips"
+            />
+          </div>
+          <div
+            class="card-action"
+          >
+            <a
+              class="card-action--button  disabled"
+            >
+              <i
+                class="material-icons"
+              >
+                thumb_up
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fixed-action-btn register-idea-btn"
+    >
+      <a
+        class="btn-floating btn-large"
+      >
+        <i
+          class="large material-icons"
+        >
+          add
+        </i>
+      </a>
+    </div>
+  </div>
+</div>
+`;

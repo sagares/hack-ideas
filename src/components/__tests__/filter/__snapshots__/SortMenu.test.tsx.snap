@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sort Menu Component renders 1`] = `
+<div>
+  <a
+    class="dropdown-trigger btn-floating btn-large"
+    data-target="dropdown1"
+  >
+    <i
+      class="large material-icons"
+    >
+      sort
+    </i>
+  </a>
+  <ul
+    class="dropdown-content"
+    id="dropdown1"
+    tabindex="0"
+  >
+    <li
+      class=""
+      tabindex="0"
+    >
+      <a>
+        <i
+          class="material-icons"
+        >
+          access_time
+        </i>
+        By Created On
+      </a>
+    </li>
+    <li
+      class=""
+      tabindex="0"
+    >
+      <a>
+        <i
+          class="material-icons"
+        >
+          thumb_up
+        </i>
+        By Upvotes
+      </a>
+    </li>
+    <li
+      class="divider"
+      tabindex="-1"
+    />
+    <li
+      tabindex="0"
+    >
+      <a>
+        <i
+          class="material-icons"
+        >
+          cached
+        </i>
+        Reset
+      </a>
+    </li>
+  </ul>
+</div>
+`;

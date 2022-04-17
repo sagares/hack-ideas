@@ -1,0 +1,76 @@
+@import "../colors.less";
+
+.hack-idea--card {
+  border: 1px solid @dark-clr;
+  border-radius: 5px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+
+  &.card {
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding-bottom: 0.5em;
+
+      .card-title {
+        color: @emphasis-clr;
+        font-weight: 500;
+      }
+
+      p {
+        flex-grow: 1;
+      }
+
+      .card-chips {
+        .chip {
+          background-color: @dark-clr;
+          color: @emphasis-clr;
+        }
+      }
+    }
+
+    .card-action {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+      padding: 16px 0;
+
+      &--button {
+        &:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+          align-items: center;
+          color: @emphasis-clr;
+          cursor: pointer;
+          display: flex;
+          margin-right: 5px;
+          padding: 0.2em 1em;
+
+          &.upvoted {
+            background-color: fade(@emphasis-clr, 70%);
+            border-radius: 55px;
+            color: @dark-clr !important;
+          }
+
+          &.disabled {
+            color: @dark-clr !important;
+            pointer-events: none;
+          }
+
+          .upvotes-count {
+            margin: 0 5px;
+          }
+
+          &:hover {
+            color: fade(@emphasis-clr, 80%);
+          }
+        }
+      }
+    }
+
+    .card-chips {
+      margin-top: 1em;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login From Component renders login form 1`] = `
+<div>
+  <div
+    class="card-panel login-form-card z-depth-3"
+  >
+    <div
+      class="row valign-wrapper login-form-wrapper"
+    >
+      <div
+        class="col s12 m12 l6"
+      >
+        <h2>
+          { Hack Ideas }
+        </h2>
+        <h6>
+          Enter With Employee Id
+        </h6>
+      </div>
+      <form
+        class="col s12 m12 l6"
+        novalidate=""
+      >
+        <div
+          class="row valign-wrapper"
+        >
+          <div
+            class="input-field col s12"
+          >
+            <input
+              class="validate tooltipped"
+              data-error="Employee ID is required"
+              data-position="bottom"
+              data-tooltip="Enter your 6 digit employee ID"
+              id="empId"
+              required=""
+              type="text"
+              value=""
+            />
+            <label
+              for="empId"
+            >
+              Employee ID
+            </label>
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <button
+            class="col s6 m12 l12 btn btn-large waves-effect"
+            disabled=""
+            name="btn_login"
+            type="submit"
+          >
+            Login
+            <i
+              class="material-icons right"
+            >
+              send
+            </i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

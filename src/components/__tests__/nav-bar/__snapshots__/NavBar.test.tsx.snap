@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Bar Component renders 1`] = `
+<div>
+  <nav>
+    <div
+      class="nav-wrapper"
+    >
+      <a
+        class="brand-logo"
+      >
+        { Hack Ideas }
+      </a>
+      <ul
+        class="right hide-on-med-and-down"
+      >
+        <li>
+          <a
+            class="logout-btn"
+          >
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
