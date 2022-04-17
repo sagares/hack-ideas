@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hack Ideas State renders hack ideas state 1`] = `
+<div>
+  <div
+    class="set-current-user"
+  />
+  <div
+    class="set-ideas"
+  />
+  <div
+    class="log-out"
+  />
+  <div
+    class="current-user"
+  />
+  <div
+    class="ideas"
+  />
+</div>
+`;
