@@ -1,3 +1,4 @@
+<img width="1179" alt="Screenshot 2022-04-18 at 12 21 13 AM" src="https://user-images.githubusercontent.com/31887015/163728396-e31cdd59-9a02-4420-8b8a-51205a5bcabd.png">
 #  { Hack Ideas }
 ### A web application in react to register and view hackathon ideas of an organization.
 
@@ -38,7 +39,7 @@ I have developed this project using React JS. For styling I have used LESS. Usin
 ## Screenshots
 
 ### Login Screen
-<img width="1371" alt="login-form" src="https://user-images.githubusercontent.com/31887015/163726896-f517d499-b63d-4692-95c2-cf5eb09ce50f.png">
+<img width="1179" alt="Screenshot 2022-04-18 at 12 21 13 AM" src="https://user-images.githubusercontent.com/31887015/163728436-e2f30498-ee84-4e47-b781-18365ee38b23.png">
 
 ### Home Page
 <img width="1788" alt="home-page" src="https://user-images.githubusercontent.com/31887015/163726912-4dabebea-261e-4623-a61d-bcbf8ab5a17c.png">
@@ -49,6 +50,7 @@ I have developed this project using React JS. For styling I have used LESS. Usin
 ### Searching
 <img width="1788" alt="search-bar" src="https://user-images.githubusercontent.com/31887015/163726947-5462c378-e4f0-4a98-8cef-cdfffb0222aa.png">
 
-
 ### Sorting
 <img width="1789" alt="sort-by-menu" src="https://user-images.githubusercontent.com/31887015/163726963-b2f36f8a-c38f-4a8e-a445-02bd8a4a2568.png">
+
+
