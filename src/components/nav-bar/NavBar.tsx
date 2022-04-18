@@ -17,7 +17,7 @@ const NavBar = () => {
     <nav>
       <div className="nav-wrapper">
         <a className="brand-logo">{`{ Hack Ideas }`}</a>
-        <ul className="right hide-on-med-and-down">
+        <ul className="right">
           <li>
             <a className="logout-btn" onClick={handleLogout}>
               Logout
