@@ -4,7 +4,7 @@
   "description": "A web application in react to register and view hackathon ideas of an organization.",
   "main": "index.js",
   "scripts": {
-    "predeploy": "cross-env NODE_ENV=production webpack",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
@@ -36,7 +36,7 @@
     "babel-loader": "^8.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
