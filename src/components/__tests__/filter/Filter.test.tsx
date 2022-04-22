@@ -20,6 +20,7 @@ describe("Filter Component", () => {
         sortBy=""
         onFilter={onFilterSpy}
         onSort={onSortSpy}
+        orderAsc={true}
       />,
       {
         container: document.body.appendChild(element),

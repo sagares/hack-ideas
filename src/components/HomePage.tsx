@@ -13,8 +13,21 @@ const HomePage = () => {
   const { ideas, setIdeas } = useContext(HackIdeasContext);
 
   const [searchString, setSearchString] = useState("");
+  const [orderAsc, serOrderAsc] = useState(true);
   const [sortBy, setSortBy] = useState("");
-  const filteredIdeas = useSearchableIdeas(ideas, searchString, sortBy);
+  const filteredIdeas = useSearchableIdeas(
+    ideas,
+    searchString,
+    sortBy,
+    orderAsc
+  );
+
+  const handleSortChange = (newSortBy: string) => {
+    setSortBy((prevSortBy) => {
+      serOrderAsc(prevSortBy === newSortBy ? !orderAsc : orderAsc);
+      return newSortBy;
+    });
+  };
 
   useEffect(() => {
     getIdeas(setIdeas);
@@ -27,7 +40,8 @@ const HomePage = () => {
         onFilter={setSearchString}
         searchText={searchString}
         sortBy={sortBy}
-        onSort={setSortBy}
+        orderAsc={orderAsc}
+        onSort={handleSortChange}
       />
       <div className="hack-ideas--cards">
         {filteredIdeas?.length > 0 ? (

@@ -2,12 +2,23 @@
  * @jest-environment jsdom
  */
 import React from "react";
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import { getIdeas } from "../../utils/ServiceUtil";
 import HackIdeasContext from "../../context";
 import HomePage from "../HomePage";
 
+const callbackMap = {};
+const mockFilterComponent = jest.fn();
 jest.mock("../../utils/ServiceUtil");
+jest.mock("../filter/Filter", () => (props) => {
+  for(let prop in props) {
+    if(typeof props[prop] === "function") {
+      callbackMap[prop] = props[prop];
+    }
+  };
+  mockFilterComponent(props);
+  return <div>Filter</div>;
+});
 
 describe("Home Page Component", () => {
   let element, component, setIdeas;
@@ -53,6 +64,42 @@ describe("Home Page Component", () => {
   test("renders hack ideas grid", () => {
     expect(component.container).toMatchSnapshot();
     expect(component.container.querySelector(".hack-idea--grid")).toBeDefined();
+    expect(mockFilterComponent).toHaveBeenCalledWith(
+      expect.objectContaining({
+        orderAsc: true,
+        searchText: "",
+        sortBy: "",
+      })
+    );
+  });
+
+  test("handles on sort callback", () => {
+    act(() => {
+      callbackMap["onSort"]("mock-sort-by");
+    });
+    expect(mockFilterComponent).toHaveBeenCalledWith(
+      expect.objectContaining({
+        orderAsc: true,
+        searchText: "",
+        sortBy: "mock-sort-by",
+      })
+    );
+  });
+
+  test("reverts ascending order if sort by is same as previous", () => {
+    act(() => {
+      callbackMap["onSort"]("new-sort-by");
+    });
+    act(() => {
+      callbackMap["onSort"]("new-sort-by");
+    });
+    expect(mockFilterComponent).toHaveBeenCalledWith(
+      expect.objectContaining({
+        orderAsc: false,
+        searchText: "",
+        sortBy: "new-sort-by",
+      })
+    );
   });
 
   test("does not render ideas grid if ideas not defined", () => {

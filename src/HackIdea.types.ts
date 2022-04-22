@@ -28,6 +28,7 @@ export type RegisterDialogProps = {
 export type FilterProps = {
   searchText: string;
   onFilter: (searchText: string) => void;
+  orderAsc: boolean;
   sortBy: string;
-  onSort: (sortyBy: string) => void;
+  onSort: (sortBy: string) => void;
 };

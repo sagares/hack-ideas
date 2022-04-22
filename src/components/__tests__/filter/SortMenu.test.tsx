@@ -13,9 +13,12 @@ describe("Sort Menu Component", () => {
 
     element = document.createElement("div");
 
-    component = render(<SortMenu sortBy="" onSort={onSortSpy} />, {
-      container: document.body.appendChild(element),
-    });
+    component = render(
+      <SortMenu sortBy="" onSort={onSortSpy} orderAsc={true} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
   });
 
   afterEach(() => {
@@ -51,9 +54,12 @@ describe("Sort Menu Component", () => {
   });
 
   test("renders submitted on option as active element", () => {
-    component = render(<SortMenu sortBy="submittedOn" onSort={onSortSpy} />, {
-      container: document.body.appendChild(element),
-    });
+    component = render(
+      <SortMenu sortBy="submittedOn" onSort={onSortSpy} orderAsc={true} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
     const submittedOn = element.querySelector(
       ".dropdown-content li:nth-child(1)"
     );
@@ -61,12 +67,67 @@ describe("Sort Menu Component", () => {
     expect(submittedOn.classList.contains("active")).toBe(true);
   });
 
+  test("renders sort arrows with submitted on option if current active sort by is submitted on", () => {
+    component = render(
+      <SortMenu sortBy="submittedOn" onSort={onSortSpy} orderAsc={true} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
+    let submittedOn = element.querySelector(".dropdown-content li:nth-child(1)");
+
+    expect(submittedOn.innerHTML).toBe(
+      `<a><i class=\"material-icons\">access_time</i>By Created On<i class=\"material-icons\">arrow_upward</i></a>`
+    );
+
+    component = render(
+      <SortMenu sortBy="submittedOn" onSort={onSortSpy} orderAsc={false} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
+    submittedOn = element.querySelector(".dropdown-content li:nth-child(1)");
+
+    expect(submittedOn.innerHTML).toBe(
+      `<a><i class=\"material-icons\">access_time</i>By Created On<i class=\"material-icons\">arrow_downward</i></a>`
+    );
+  });
+
   test("renders upvotes option as active element", () => {
-    component = render(<SortMenu sortBy="upvotes" onSort={onSortSpy} />, {
-      container: document.body.appendChild(element),
-    });
+    component = render(
+      <SortMenu sortBy="upvotes" onSort={onSortSpy} orderAsc={true} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
     const upvotes = element.querySelector(".dropdown-content li:nth-child(2)");
 
     expect(upvotes.classList.contains("active")).toBe(true);
+  });
+
+  test("renders sort arrows with upvotes if current active sort by is upvotes", () => {
+    component = render(
+      <SortMenu sortBy="upvotes" onSort={onSortSpy} orderAsc={true} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
+    let upvotes = element.querySelector(".dropdown-content li:nth-child(2)");
+
+    expect(upvotes.innerHTML).toBe(
+      `<a><i class=\"material-icons\">thumb_up</i>By Upvotes<i class=\"material-icons\">arrow_downward</i></a>`
+    );
+
+    component = render(
+      <SortMenu sortBy="upvotes" onSort={onSortSpy} orderAsc={false} />,
+      {
+        container: document.body.appendChild(element),
+      }
+    );
+    upvotes = element.querySelector(".dropdown-content li:nth-child(2)");
+
+    expect(upvotes.innerHTML).toBe(
+      `<a><i class=\"material-icons\">thumb_up</i>By Upvotes<i class=\"material-icons\">arrow_upward</i></a>`
+    );
   });
 });

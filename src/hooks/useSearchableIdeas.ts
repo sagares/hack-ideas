@@ -1,7 +1,12 @@
 import { useMemo } from "react";
 import { IdeasArray } from "../HackIdea.types";
 
-const useSearchableIdeas = (ideas: IdeasArray, searchText: string, sortBy: string) => {
+const useSearchableIdeas = (
+  ideas: IdeasArray,
+  searchText: string,
+  sortBy: string,
+  orderAsc: boolean
+) => {
   return useMemo(() => {
     const escapedSearchString = searchText.replace(
       /[-[\]{}()*+?.,\\^$|#\s]/g,
@@ -9,7 +14,8 @@ const useSearchableIdeas = (ideas: IdeasArray, searchText: string, sortBy: strin
     );
     const matchString = new RegExp(escapedSearchString, "gi");
 
-    const filteredIdeas = ideas &&
+    const filteredIdeas =
+      ideas &&
       Object.keys(ideas).reduce((acc, key) => {
         const idea = ideas[key];
         if (
@@ -22,22 +28,22 @@ const useSearchableIdeas = (ideas: IdeasArray, searchText: string, sortBy: strin
         return acc;
       }, []);
 
-      return (
-        filteredIdeas &&
+    if (filteredIdeas) {
+      if (sortBy === "submittedOn") {
         filteredIdeas.sort((idea1, idea2) => {
-          if (sortBy === "submittedOn") {
-            return idea2.submittedOn - idea1.submittedOn;
-          } else if(sortBy === "upvotes"){
-            const upvotes1 = idea1.upvotes?.length || 0;
-            const upvotes2 = idea2.upvotes?.length || 0;
-            return upvotes2 - upvotes1;
-          } else {
-              return 0;
-          }
-        })
-      ); 
-    
-  }, [ideas, searchText, sortBy]);
+          return orderAsc ? idea2.submittedOn - idea1.submittedOn : idea1.submittedOn - idea2.submittedOn;
+        });
+      } else if (sortBy === "upvotes") {
+        filteredIdeas.sort((idea1, idea2) => {
+          const upvotes1 = idea1.upvotes?.length || 0;
+          const upvotes2 = idea2.upvotes?.length || 0;
+          return orderAsc ? upvotes2 - upvotes1 : upvotes1 - upvotes2;
+        });
+      }
+    }
+
+    return filteredIdeas;
+  }, [ideas, searchText, sortBy, orderAsc]);
 };
 
 export default useSearchableIdeas;
